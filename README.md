@@ -1,6 +1,9 @@
 # Social-Network-API
 https://github.com/MattOz/Social-Network-API
 ## Description
+An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. This API uses Express.js for routing, a MongoDB database, and the Mongoose ODM.
+
+[Link to walkthrough video](https://drive.google.com/file/d/13GNIcCqXBFdlbx9W86ZUwjGreL6qiLeD/view)
 
 ## Table of Contents
 - [Installation](#installation)
