@@ -16,13 +16,13 @@ module.exports = {
             .populate('friends')
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: "No user with this id" })
+                    ? res.status(404).json({ message: "No user with this ID" })
                     : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
     },
 
-    // post a new user
+    // post new user
     createUser(req, res) {
         User.create(req.body)
             .then((user) => res.json(user))
@@ -38,7 +38,7 @@ module.exports = {
         )
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: "No user with this id" })
+                    ? res.status(404).json({ message: "No user with this ID" })
                     : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
@@ -47,10 +47,10 @@ module.exports = {
     // delete user by _id
     // BONUS: delete user's thoughts when deleted
     deleteUser(req, res) {
-        User.findOneAndRemove({ _id: req.params.userId })
+        User.findOneAndDelete({ _id: req.params.userId })
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: "No user with this id" })
+                    ? res.status(404).json({ message: "No user with this ID" })
                     : Thought.deleteMany(
                         { userId: req.params.userId }
                     )
@@ -68,7 +68,7 @@ module.exports = {
         )
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: "No user with this id" })
+                    ? res.status(404).json({ message: "No user with this ID" })
                     : res.json(user))
             .catch((err) => res.status(500).json(err));
     },
@@ -82,7 +82,7 @@ module.exports = {
         )
             .then((user) =>
                 !user
-                    ? res.status(404).json({ message: 'No user with this id' })
+                    ? res.status(404).json({ message: 'No user with this ID' })
                     : res.json(user)
             )
             .catch((err) => res.status(500).json(err));
